@@ -40,7 +40,7 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
 };
 
 const HighlightedName = styled.span`
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.1rem;
   color: #4f4f4f;
   margin-right: 5px;
