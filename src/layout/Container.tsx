@@ -18,7 +18,6 @@ const Container = styled.div`
   padding: 16px;
   @media (min-width: 500px) { padding: 24px; }
 
-  /* 투명 효과를 싫어하는 사용자 접근성 옵션 대응 */
   @media (prefers-reduced-transparency: reduce) {
     background: #ffffff;
     backdrop-filter: none;

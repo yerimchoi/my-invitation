@@ -13,11 +13,17 @@ import Main from '@/layout/Main/Main.tsx';
 
 const BackgroundLayer = styled.div`
   position: fixed;
-  inset: 0; /* top:0; right:0; bottom:0; left:0; */
-  z-index: -1; /* 컨텐츠 뒤로 */
+  inset: 0;
+  z-index: 0; /* ✅ body 뒤로 빠지지 않도록 음수 금지 */
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+`;
+
+/* ✅ 컨텐츠 스택: 배경 레이어 위에 쌓이도록 */
+const ContentStack = styled.div`
+  position: relative;
+  z-index: 1;
 `;
 
 function App() {
@@ -37,41 +43,46 @@ function App() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // ✅ GitHub Pages 서브경로에서도 안전한 경로
   const bgUrl = `${import.meta.env.BASE_URL}background.png`;
 
   return (
     <>
-      {/* 전체 페이지 배경 레이어 */}
       <BackgroundLayer style={{ backgroundImage: `url(${bgUrl})` }} />
 
-      {/* 불투명 흰색 카드 컨테이너(이미 잘 설정되어 있음) */}
-      <Container>
-        <Wrapper>
-          <Main />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>모시는 글</Heading1>
-          <Invitation />
-        </Wrapper>
-        <Wrapper ref={galleryRef}>
-          <Heading1>Gallery</Heading1>
-          <GalleryWrap />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>마음 전하실 곳</Heading1>
-          <Account />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>오시는 길</Heading1>
-          <Location />
-        </Wrapper>
-        <Wrapper>
-          <Heading1>신랑 신부에게</Heading1>
-          <Guestbook />
-        </Wrapper>
-        <FloatingBar isVisible={isVisible} />
-      </Container>
+      <ContentStack>
+        <Container>
+          <Wrapper>
+            <Main />
+          </Wrapper>
+
+          <Wrapper>
+            <Heading1>모시는 글</Heading1>
+            <Invitation />
+          </Wrapper>
+
+          <Wrapper ref={galleryRef}>
+            <Heading1>Gallery</Heading1>
+            <GalleryWrap />
+          </Wrapper>
+
+          <Wrapper>
+            <Heading1>마음 전하실 곳</Heading1>
+            <Account />
+          </Wrapper>
+
+          <Wrapper>
+            <Heading1>오시는 길</Heading1>
+            <Location />
+          </Wrapper>
+
+          <Wrapper>
+            <Heading1>신랑 신부에게</Heading1>
+            <Guestbook />
+          </Wrapper>
+
+          <FloatingBar isVisible={isVisible} />
+        </Container>
+      </ContentStack>
     </>
   );
 }
