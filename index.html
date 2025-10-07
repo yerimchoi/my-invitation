@@ -1,22 +1,33 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
+
+    <!-- Google Fonts: Playfair Display(라틴, 제목용) + Noto Serif KR(한글, 본문/폴백) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>세모와 네모, 결혼합니다</title>
-    <meta name="description" content="2024년 2월 17일 (토) 14:00 아펠가모 공덕 라로브홀">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Noto+Serif+KR:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    >
 
-    <meta property="og:url" content="https://happily-ever-after.vercel.app/">
+    <!-- favicon / OG 이미지: 절대경로(/...) 대신 상대경로 사용 -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Day</title>
+    <meta name="description" content="2025년 12월 06일 (토) 11:00 더채플앳대치">
+
+    <!-- GitHub Pages 배포 URL로 교체 -->
+    <meta property="og:url" content="https://yerimchoi.github.io/my-invitation/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="세모와 네모, 결혼합니다">
-    <meta name="description" property="og:description" content="2024년 2월 17일 (토) 14:00 아펠가모 공덕 라로브홀">
-    <meta property="og:image" content="/thumbnail.jpg">
+    <meta property="og:title" content="원철과 예림, 결혼합니다">
+    <meta name="description" property="og:description" content="2025년 12월 06일 (토) 11:00 더채플앳대치">
+    <meta property="og:image" content="thumbnail.jpg">
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <!-- 절대경로(/src/...) 말고 상대경로로 -->
+    <script type="module" src="src/main.tsx"></script>
   </body>
 </html>
