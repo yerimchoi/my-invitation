@@ -17,12 +17,6 @@ const Container = styled.div`
 
   padding: 16px;
   @media (min-width: 500px) { padding: 24px; }
-
-  @media (prefers-reduced-transparency: reduce) {
-    background: #ffffff;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-  }
 `;
 
 export default Container;
