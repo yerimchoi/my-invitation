@@ -30,18 +30,19 @@ const Accordion = ({ title, children }: IAccordionProps) => {
 export default Accordion;
 
 const AccordionWrapper = styled.div`
-  border: 1px solid #e6ece1;
+  border: 1px solid rgba(230, 236, 225, 0.7); /* 살짝 투명 테두리 */
   margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
   transition: all 0.3s ease;
+  background: transparent; /* ✅ 래퍼도 투명 */
 `;
 
 const AccordionHeader = styled.div<{ isActive: boolean }>`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #e6ece1;
+  background-color: rgba(230, 236, 225, 0.7);
   padding: 0 15px;
   cursor: pointer;
   `;
@@ -69,5 +70,5 @@ const AccordionContent = styled.div`
   font-size: 14px;
   text-align: justify;
   padding: 10px 20px;
-  background-color: #ffffff;
+  background: rgba(255, 255, 255, 0);
 `;
