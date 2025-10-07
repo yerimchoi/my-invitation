@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Global, css } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Heading1 } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 import Account from '@/layout/Account/Account.tsx';
@@ -11,77 +11,67 @@ import Invitation from '@/layout/Invitation/Invitation.tsx';
 import Location from '@/layout/Location/Location.tsx';
 import Main from '@/layout/Main/Main.tsx';
 
+const BackgroundLayer = styled.div`
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0; */
+  z-index: -1; /* 컨텐츠 뒤로 */
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+`;
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
-  const galleryRef = useRef(null);
+  const galleryRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    window.addEventListener('scroll', checkScrollPosition);
-    return () => {
-      window.removeEventListener('scroll', checkScrollPosition);
+    const onScroll = () => {
+      if (galleryRef.current) {
+        const { offsetTop } = galleryRef.current;
+        const scrollPosition = window.scrollY;
+        setIsVisible(scrollPosition >= offsetTop);
+      }
     };
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const checkScrollPosition = () => {
-    if (galleryRef.current) {
-      const { offsetTop } = galleryRef.current;
-      const scrollPosition = window.scrollY;
-
-      if (scrollPosition >= offsetTop) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    }
-  };
+  // ✅ GitHub Pages 서브경로에서도 안전한 경로
+  const bgUrl = `${import.meta.env.BASE_URL}background.png`;
 
   return (
     <>
-      <Global styles={css`
-        html, body {
-          min-height: 100dvh;
-          background:
-            var(--bg)
-            url(${import.meta.env.BASE_URL}background.png) center top / cover
-            no-repeat fixed;
-        }
-        /* iOS 사파리에서 fixed 버벅이면 아래 주석을 풀고 fixed 제거
-        @supports (-webkit-touch-callout: none) {
-          html, body {
-            background:
-              var(--bg)
-              url(${import.meta.env.BASE_URL}background.png) center top / cover
-              no-repeat;
-          }
-        } */
-        #root { background: transparent !important; }
-      `} />
-    <Container>
-      <Wrapper>
-        <Main />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>모시는 글</Heading1>
-        <Invitation />
-      </Wrapper>
-      <Wrapper ref={galleryRef}>
-        <Heading1>Gallery</Heading1>
-        <GalleryWrap />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>마음 전하실 곳</Heading1>
-        <Account />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>오시는 길</Heading1>
-        <Location />
-      </Wrapper>
-      <Wrapper>
-        <Heading1>신랑 신부에게</Heading1>
-        <Guestbook />
-      </Wrapper>
-      <FloatingBar isVisible={isVisible} />
-    </Container>
+      {/* 전체 페이지 배경 레이어 */}
+      <BackgroundLayer style={{ backgroundImage: `url(${bgUrl})` }} />
+
+      {/* 불투명 흰색 카드 컨테이너(이미 잘 설정되어 있음) */}
+      <Container>
+        <Wrapper>
+          <Main />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>모시는 글</Heading1>
+          <Invitation />
+        </Wrapper>
+        <Wrapper ref={galleryRef}>
+          <Heading1>Gallery</Heading1>
+          <GalleryWrap />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>마음 전하실 곳</Heading1>
+          <Account />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>오시는 길</Heading1>
+          <Location />
+        </Wrapper>
+        <Wrapper>
+          <Heading1>신랑 신부에게</Heading1>
+          <Guestbook />
+        </Wrapper>
+        <FloatingBar isVisible={isVisible} />
+      </Container>
     </>
   );
 }

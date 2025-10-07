@@ -15,7 +15,6 @@ body {
   min-width: 280px;
 
   min-height: 100dvh;
-  background: var(--bg)
 }
 
 @font-face {
