@@ -15,27 +15,7 @@ body {
   min-width: 280px;
 
   min-height: 100dvh;
-  background:
-    var(--bg)
-    url('/background.png') center top / cover
-    no-repeat fixed;
-}
-
-/* iOS 사파리에서 fixed 버벅이면 fixed 빼기 */
-@supports (-webkit-touch-callout: none) {
-  html, body {
-    background:
-      var(--bg)
-      url('/background.png') center top / cover
-      no-repeat;
-  }
-}
-
-/* 리액트 루트는 투명 유지 */
-#root {
-  width: 100%;
-  min-height: 100dvh;
-  background: transparent !important;
+  background: var(--bg)
 }
 
 @font-face {

@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { Global, css } from '@emotion/react';
 import { Heading1 } from '@/components/Text.tsx';
 import Wrapper from '@/components/Wrapper.tsx';
 import Account from '@/layout/Account/Account.tsx';
@@ -35,6 +36,26 @@ function App() {
   };
 
   return (
+    <>
+      <Global styles={css`
+        html, body {
+          min-height: 100dvh;
+          background:
+            var(--bg)
+            url(${import.meta.env.BASE_URL}background.png) center top / cover
+            no-repeat fixed;
+        }
+        /* iOS 사파리에서 fixed 버벅이면 아래 주석을 풀고 fixed 제거
+        @supports (-webkit-touch-callout: none) {
+          html, body {
+            background:
+              var(--bg)
+              url(${import.meta.env.BASE_URL}background.png) center top / cover
+              no-repeat;
+          }
+        } */
+        #root { background: transparent !important; }
+      `} />
     <Container>
       <Wrapper>
         <Main />
@@ -61,6 +82,7 @@ function App() {
       </Wrapper>
       <FloatingBar isVisible={isVisible} />
     </Container>
+    </>
   );
 }
 

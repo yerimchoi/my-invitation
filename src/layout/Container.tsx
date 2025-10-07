@@ -9,13 +9,8 @@ const Container = styled.div`
   background: #ffffff;
   border-radius: 24px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.12);
-
-  /* 내부 여백 */
   padding: 16px;
-
-  @media screen and (min-width: 500px) {
-    padding: 24px;
-  }
+  @media (min-width: 500px) { padding: 24px; }
 `;
 
 export default Container;
