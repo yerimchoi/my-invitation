@@ -23,15 +23,20 @@ const MainImg = styled.img`
 `;
 
 const MainTitle = styled.p`
-  font-family: HSSanTokki20-Regular, serif;
+  font-family: var(--font-heading);  /* "Playfair Display", "Noto Serif KR", serif */
+  font-weight: 700;                  /* 600~700 권장 */
   font-size: 2rem;
+  letter-spacing: 0.2px;
   color: #2F2120;
   line-height: 120%;
   white-space: pre-line;
 `;
 
 const SubTitle = styled.p`
+  font-family: var(--font-body);      /* "Noto Serif KR", serif */
+  font-weight: 400;
   font-size: 1.1rem;
+  letter-spacing: 0.1px;
   color: #2F2120;
   line-height: 140%;
   white-space: pre-line;
