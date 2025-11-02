@@ -41,7 +41,7 @@ const HostInfo = ({ person }: { person: BrideAndGroom }) => {
 
 const HighlightedName = styled.span`
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.0rem, 1.1rem);
   color: #4f4f4f;
   margin-right: 5px;
 `;
@@ -59,11 +59,13 @@ const HostDetails = styled.div`
   gap: 6px;
   text-align: center;
   align-items: center;
-  font-family: var(--font-body)
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.0rem, 1.1rem);
   font-weight: 500;
 `;
 
 const RelationText = styled.div`
+  font-size: clamp(0.9rem, 1.0rem, 1.1rem);
   font-style: normal;
   line-height: 26px;
   width: 50px;
@@ -72,5 +74,6 @@ const RelationText = styled.div`
 `;
 
 const Relation = styled.div`
+  font-size: clamp(0.9rem, 1.0rem, 1.1rem);
   width: inherit;
 `;

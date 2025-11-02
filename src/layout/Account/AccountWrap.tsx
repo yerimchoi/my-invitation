@@ -83,7 +83,7 @@ const Relation = styled.span`
   color: #44484d;
 `;
 const Name = styled.span`
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 0.95rem, 1rem);
   font-weight: 600;
 `;
 

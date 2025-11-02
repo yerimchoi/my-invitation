@@ -36,7 +36,7 @@ const MainImg = styled.img`
 const MainTitle = styled.p`
   font-family: var(--font-body); 
   font-weight: 400;                 
-  font-size: 2rem;
+  font-size: clamp(1.7rem, 1.8rem, 1.9rem);
   letter-spacing: 0.2px;
   color: #2F2120;
   line-height: 120%;
@@ -46,7 +46,7 @@ const MainTitle = styled.p`
 const SubTitle = styled.p`
   font-family: var(--font-body);     
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 1.0rem, 1.1rem);
   letter-spacing: 0.1px;
   color: #2F2120;
   line-height: 140%;
