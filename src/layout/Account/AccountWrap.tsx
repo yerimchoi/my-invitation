@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import Copy from '@/assets/icons/copy.svg?react';
+import Copy from '@/assets/icons/copyy.png?url';
 import kakaopay from '@/assets/icons/kakaopay.png?url';
 import toss from '@/assets/icons/toss.png?url';
 
