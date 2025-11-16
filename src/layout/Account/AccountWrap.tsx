@@ -103,12 +103,11 @@ const CopyButton = styled.button`
   gap: 2px;
   outline: none;
   box-shadow: none;
-  background: white;
 `;
 
 const CopyIcon = styled.img`
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: block;
 `;
 
