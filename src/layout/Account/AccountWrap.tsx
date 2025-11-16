@@ -41,7 +41,7 @@ const AccountWrap = ({
           {bank} {account}
         </AccountInfo>
         <CopyButton onClick={handleCopy}>
-          <Copy fill="none" />
+          <Copy />
         </CopyButton>
       </Details>
       <AccountLinks>
