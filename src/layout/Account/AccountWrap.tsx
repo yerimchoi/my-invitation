@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
-import Copy from '@/assets/icons/copy.svg?react';
+// import Copy from '@/assets/icons/copy.svg?react';
+import Copy from '@/assets/icons/copyy.png?url';
 import kakaopay from '@/assets/icons/kakaopay.png?url';
 import toss from '@/assets/icons/toss.png?url';
 
@@ -41,7 +42,7 @@ const AccountWrap = ({
           {bank} {account}
         </AccountInfo>
         <CopyButton onClick={handleCopy}>
-          <Copy />
+          <CopyIcon src={Copy} alt="계좌번호 복사" />
         </CopyButton>
       </Details>
       <AccountLinks>
@@ -104,6 +105,13 @@ const CopyButton = styled.button`
   box-shadow: none;
   background: white;
 `;
+
+const CopyIcon = styled.img`
+  width: 16px;
+  height: 16px;
+  display: block;
+`;
+
 
 const AccountLinks = styled.div`
   display: flex;
