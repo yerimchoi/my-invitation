@@ -151,10 +151,9 @@ Error generating stack: `+o.message+`
   gap: 2px;
   outline: none;
   box-shadow: none;
-  background: white;
 `,Wv=N.img`
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: block;
 `,Vv=N.div`
   display: flex;
