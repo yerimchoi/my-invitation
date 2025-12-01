@@ -119,8 +119,8 @@ Error generating stack: `+o.message+`
 	10:30 더채플 도착
 	13:00 복귀, H1 -> DS큐브 -> P1
 
-	삼성전자 회사 셔틀 탑승 시 오픈 카톡방 참여
-	(https://open.kakao.com/o/gC3x9PYh, 참여코드 1206)`},{title:"● 주차안내 (2시간 무료 주차)",desc:`♡ 건물 내 지하 주차장 발렛 이용
+	♡ 회사 셔틀 탑승 시 오픈 카톡방 참여 (참여코드 1206)
+	https://open.kakao.com/o/gC3x9PYh`},{title:"● 주차안내 (2시간 무료 주차)",desc:`♡ 건물 내 지하 주차장 발렛 이용
 ♡ 홀 내 만차 시, 옆 새마을운동중앙회 건물 주차장 안내 예정`}],Jt={greeting:Iv,hostInfo:zv,mapInfo:Ov,locationInfo:Av},Nv="/my-invitation/assets/copyy-6499fa9d.png",Mv="/my-invitation/assets/kakaopay-04fb4742.png",Rv="/my-invitation/assets/toss-fd8eda17.png",Dv=({name:e,relation:t,bank:n,account:i,kakaopayAccount:r,tossAccount:o})=>te(Fv,{children:[te($v,{children:[L(jv,{children:t}),L(Bv,{children:e})]}),te(Zv,{children:[te(Hv,{children:[n," ",i]}),L(Uv,{onClick:()=>{navigator.clipboard.writeText(i).then(()=>{alert("계좌번호가 복사되었습니다.")},()=>{alert("계좌번호 복사에 실패했습니다.")})},children:L(Wv,{src:Nv,alt:"계좌번호 복사"})})]}),te(Vv,{children:[r&&L(Au,{href:r,target:"_blank",rel:"noreferrer",children:L(bv,{src:Mv,alt:"kakaopay"})}),o&&L(Au,{href:o,target:"_blank",rel:"noreferrer",children:L(Qv,{src:Rv,alt:"toss"})})]})]}),Fv=N.div`
   font-family: var(--font-body);
   padding: 10px 0;
