@@ -105,12 +105,12 @@ Error generating stack: `+o.message+`
 저희를 더욱 빛내주실 여러분을 초대합니다.
 `,host:{groom:{name:"신원철",relation:"아들",parents:[{relation:"아버지",name:"신현오"},{relation:"어머니",name:"김민정"}]},bride:{name:"최예림",relation:"딸",parents:[{relation:"아버지",name:"최영근"},{relation:"어머니",name:"박희경"}]}},eventDetail:`2025년 12월 6일 (토) 11:00
 더채플앳대치`},zv=[{host:"신랑측",accountInfo:[{name:"신원철",relation:"신랑",bank:"NH농협은행",account:"3021670519231",kakaopayAccount:"",tossAccount:""},{name:"신현오",relation:"아버지",bank:"신한은행",account:"110-184-161915"},{name:"김민정",relation:"어머니",bank:"신한은행",account:"110-118-373697"}]},{host:"신부측",accountInfo:[{name:"최예림",relation:"신부",bank:"우리은행",account:"1002-543-528036",kakaopayAccount:"",tossAccount:""},{name:"최영근",relation:"아버지",bank:"하나은행",account:"18918166528"},{name:"박희경",relation:"어머니",bank:"우리은행",account:"1002-652-951003"}]}],Ov={address1:"더채플앳대치",address2:`서울 강남구 영동대로 318
-02-554-1121`,naverMap:"https://naver.me/F16jN6ao",kakaoMap:"https://kko.kakao.com/HPTumzWmbK",lat:37.5030183549105,lon:127.066989972757},Av=[{title:"● 지하철",desc:`♥2호선 삼성역 2번 출구 (도보 10분)
-♥3호선 학여울역 1번 출구 (도보 10분)
-`},{title:"● 셔틀버스",desc:`♥ 셔틀버스: 
+02-554-1121`,naverMap:"https://naver.me/F16jN6ao",kakaoMap:"https://kko.kakao.com/HPTumzWmbK",lat:37.5030183549105,lon:127.066989972757},Av=[{title:"● 지하철",desc:`♡ 2호선 삼성역 2번 출구 (도보 10분)
+♡ 3호선 학여울역 1번 출구 (도보 10분)
+`},{title:"● 셔틀버스",desc:`♡ 셔틀버스: 
 	삼성역, 학여울역 10시 출발, 15분 간격
 
-♥ 삼성전자 회사 셔틀: 
+♡ 삼성전자 회사 셔틀: 
 	08:00 P1 출발
 	08:50 DS 큐브 도착
 	09:00 DS 큐브 출발
@@ -120,8 +120,8 @@ Error generating stack: `+o.message+`
 	13:00 복귀, H1 -> DS큐브 -> P1
 
 	삼성전자 회사 셔틀 탑승 시 오픈 카톡방 참여
-	(https://open.kakao.com/o/gC3x9PYh, 참여코드 1206)`},{title:"● 주차안내 (2시간 무료 주차)",desc:`♥건물 내 지하주차장으로 안내
-♥홀 내 만차 시, 바로 옆 새마을운동중앙회 건물 주차장으로 안내 예정`}],Jt={greeting:Iv,hostInfo:zv,mapInfo:Ov,locationInfo:Av},Nv="/my-invitation/assets/copyy-6499fa9d.png",Mv="/my-invitation/assets/kakaopay-04fb4742.png",Rv="/my-invitation/assets/toss-fd8eda17.png",Dv=({name:e,relation:t,bank:n,account:i,kakaopayAccount:r,tossAccount:o})=>te(Fv,{children:[te($v,{children:[L(jv,{children:t}),L(Bv,{children:e})]}),te(Zv,{children:[te(Hv,{children:[n," ",i]}),L(Uv,{onClick:()=>{navigator.clipboard.writeText(i).then(()=>{alert("계좌번호가 복사되었습니다.")},()=>{alert("계좌번호 복사에 실패했습니다.")})},children:L(Wv,{src:Nv,alt:"계좌번호 복사"})})]}),te(Vv,{children:[r&&L(Au,{href:r,target:"_blank",rel:"noreferrer",children:L(bv,{src:Mv,alt:"kakaopay"})}),o&&L(Au,{href:o,target:"_blank",rel:"noreferrer",children:L(Qv,{src:Rv,alt:"toss"})})]})]}),Fv=N.div`
+	(https://open.kakao.com/o/gC3x9PYh, 참여코드 1206)`},{title:"● 주차안내 (2시간 무료 주차)",desc:`♡ 건물 내 지하 주차장 발렛 이용
+♡ 홀 내 만차 시, 옆 새마을운동중앙회 건물 주차장 안내 예정`}],Jt={greeting:Iv,hostInfo:zv,mapInfo:Ov,locationInfo:Av},Nv="/my-invitation/assets/copyy-6499fa9d.png",Mv="/my-invitation/assets/kakaopay-04fb4742.png",Rv="/my-invitation/assets/toss-fd8eda17.png",Dv=({name:e,relation:t,bank:n,account:i,kakaopayAccount:r,tossAccount:o})=>te(Fv,{children:[te($v,{children:[L(jv,{children:t}),L(Bv,{children:e})]}),te(Zv,{children:[te(Hv,{children:[n," ",i]}),L(Uv,{onClick:()=>{navigator.clipboard.writeText(i).then(()=>{alert("계좌번호가 복사되었습니다.")},()=>{alert("계좌번호 복사에 실패했습니다.")})},children:L(Wv,{src:Nv,alt:"계좌번호 복사"})})]}),te(Vv,{children:[r&&L(Au,{href:r,target:"_blank",rel:"noreferrer",children:L(bv,{src:Mv,alt:"kakaopay"})}),o&&L(Au,{href:o,target:"_blank",rel:"noreferrer",children:L(Qv,{src:Rv,alt:"toss"})})]})]}),Fv=N.div`
   font-family: var(--font-body);
   padding: 10px 0;
   border-bottom: 1px solid #dfdfdf;
